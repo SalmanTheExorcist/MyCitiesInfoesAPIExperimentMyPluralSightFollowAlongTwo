@@ -1,0 +1,47 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@schema=https
+@hostname=localhost
+@port=8888
+
+GET {{schema}}://{{hostname}}:{{port}}/api/v2/mycitiesinfoes
+
+###
+
+GET {{schema}}://{{hostname}}:{{port}}/api/v2/mycitiesinfoes
+Accept: application/xml
+
+###
+# @name createpoi
+POST {{schema}}://{{hostname}}:{{port}}/api/v2/mycitiesinfoes/4/pointofinterests
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name":"A name for testing purposes POI",
+  "description":"A short description for testing."
+}
+
+###
+
+@pointofinterestid = {{createpoi.response.body.id}}
+
+GET {{schema}}://{{hostname}}:{{port}}/api/v2/mycitiesinfoes/4/pointofinterests/{{pointofinterestid}}
+Accept: application/json
+
+###
+
+POST  {{schema}}://{{hostname}}:{{port}}/api/authentication/authenticate
+Content-Type: application/json
+
+{
+  "username":"Some fancy username",
+  "password":"Some super hard-to-crack password"
+}
+
+###
+
+//authenticated GET request
+GET {{schema}}://{{hostname}}:{{port}}/api/v2/mycitiesinfoes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6Ik1yU3Bvb2t5IiwiZmFtaWx5X25hbWUiOiJUaGVFeG9yY2lzdCIsImNpdHkiOiJNYW5hbWEsQkgiLCJuYmYiOjE3MzAyMzk4MzMsImV4cCI6MTczMDI0MzQzMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6ODg4OCIsImF1ZCI6Im15Y2l0aWVzaW5mb2VzYXBpIn0.yVdxHt_ZZVlKDFQni4SBCpKROyeQgxEesbNOlssYcKQ
+Accept: application/xml

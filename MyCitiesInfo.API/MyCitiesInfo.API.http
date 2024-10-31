@@ -1,0 +1,14 @@
+﻿@MyCitiesInfo.API_HostAddress = https://localhost:8888
+
+POST {{MyCitiesInfo.API_HostAddress}}/api/authentication/authenticate
+Content-Type: application/json
+
+{
+  //AuthenticationRequestBody
+}
+
+###
+
+GET {{MyCitiesInfo.API_HostAddress}}/api/v{version:apiVersion}/mycitiesinfoes?nameFilter=string&searchQuery=string
+
+###
