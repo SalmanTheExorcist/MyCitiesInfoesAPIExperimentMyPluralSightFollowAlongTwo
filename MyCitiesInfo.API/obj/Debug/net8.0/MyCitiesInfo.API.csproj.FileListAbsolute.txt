@@ -162,3 +162,4 @@ C:\Users\salma\MyDotNetCoreExperiments\MyCitiesInfo\MyCitiesInfo.API\bin\Debug\n
 C:\Users\salma\MyDotNetCoreExperiments\MyCitiesInfo\MyCitiesInfo.API\bin\Debug\net8.0\MyCitiesInfo.API.xml
 C:\Users\salma\MyDotNetCoreExperiments\MyCitiesInfo\MyCitiesInfo.API\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll
 C:\Users\salma\MyDotNetCoreExperiments\MyCitiesInfo\MyCitiesInfo.API\bin\Debug\net8.0\MyCitiesInfoesDatabase.db
+C:\Users\salma\MyDotNetCoreExperiments\MyCitiesInfo\MyCitiesInfo.API\obj\Debug\net8.0\MyCitiesInfo.API.sourcelink.json
