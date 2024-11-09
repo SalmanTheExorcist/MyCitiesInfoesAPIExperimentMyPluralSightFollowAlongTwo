@@ -1,2 +1,0 @@
-*.json text eol=lf filter=mySecrets
-appsettings.Development.json text eol=lf filter=mySecrets
