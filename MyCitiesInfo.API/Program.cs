@@ -16,7 +16,7 @@ using System.Reflection;
 Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .WriteTo.Console()
-            .WriteTo.File("myLogs/myCitiesInfoesLogFile.txt", rollingInterval: RollingInterval.Day)
+            .WriteTo.File("myLogs/myCitiesInfoesLogFile.log", rollingInterval: RollingInterval.Day)
             .CreateLogger();
 
 
